@@ -5,12 +5,12 @@
  */
 int main(void)
 {
- int m;
+int m;
 
-        for (m = 48; m < 58; m++)
-        {
-                putchar(m);
-        }
-        putchar('\n');
-        return (0);
+for (m = 48; m < 58; m++)
+{
+putchar(m);
+}
+putchar('\n');
+return (0);
 }

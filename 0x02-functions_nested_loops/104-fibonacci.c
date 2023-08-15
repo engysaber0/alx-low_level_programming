@@ -34,7 +34,7 @@ for (c = 1; c <= 98; c++)
 if (flo > 0)
 printf("%lu", f1o);
 i = numLength(max) - 1 - numLength(f1);
-while (f10 > 0 && i > 0)
+while (f1o > 0 && i > 0)
 {
 printf("%d", 0);
 i--;

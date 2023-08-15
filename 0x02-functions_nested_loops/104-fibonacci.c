@@ -27,7 +27,7 @@ return (l);
 int main(void)
 {
 int c, i;
-unsigned long f1 = 1, f2 = 2, sum, max = 00000000, f1o = 0, f20 = 0, sum0 = 0;
+unsigned long f1 = 1, f2 = 2, sum, max = 100000000, f1o = 0, f2o = 0, sumo = 0;
 
 for (c = 1; c <= 98; c++)
 {

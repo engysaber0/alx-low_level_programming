@@ -31,7 +31,7 @@ unsigned long f1 = 1, f2 = 2, sum, max = 100000000, f1o = 0, f2o = 0, sumo = 0;
 
 for (c = 1; c <= 98; c++)
 {
-if (flo > 0)
+if (f2o > 0)
 printf("%lu", f1o);
 i = numLength(max) - 1 - numLength(f1);
 while (f1o > 0 && i > 0)

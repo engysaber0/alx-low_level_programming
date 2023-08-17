@@ -11,11 +11,15 @@ if (n <= 0)
 _putchar('\n');
 else
 {
-for (pos = 1; pos <= n; pos++)
+for (pos = 1; pos < n; pos++)
 {
-for (space = 1; space <= n; space++)
+for (space = 1; space < n; space++)
+{
+if (space == pos)
+_putchar('\\');
+else if (space < pos)
 _putchar(' ');
-_putchar(92);
+}
 _putchar('\n');
 }
 }

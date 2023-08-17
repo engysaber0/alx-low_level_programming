@@ -16,7 +16,7 @@ if (c > 9)
 _putchar(1 + 48);
 n = c % 10;
 }
-_putchar(1 + 48);
+_putchar(n + 48);
 }
 _putchar('\n');
 }

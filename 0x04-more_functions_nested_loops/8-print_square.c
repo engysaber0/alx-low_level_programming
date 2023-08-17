@@ -8,9 +8,9 @@
 */
 void print_square(int size)
 {
-int row, column;
+int rows, columns;
 
-for (row = 1; rows <= size; rows++)
+for (rows = 1; rows <= size; rows++)
 {
 for (columns = 1; columns <= size; columns++)
 _putchar('#');

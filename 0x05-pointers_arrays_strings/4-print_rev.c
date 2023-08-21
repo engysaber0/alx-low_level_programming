@@ -11,9 +11,8 @@ int c = 0;
 
 while (s[c])
 c++;
-while (s[c] != '\0')
+while (c--)
 {
-c--;
 _putchar(s[c]);
 }
 _putchar('\n');

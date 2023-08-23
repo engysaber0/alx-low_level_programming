@@ -13,7 +13,7 @@ k = 0;
 
 while (dest[k])
 k++;
-for (j = 0; j < n && src[j] != '\0'; j++)
+for (k = 0; k < n && src[k] != '\0'; k++)
 dest[i + k] = src[i];
 dest[i + k] = '\0';
 return (dest);

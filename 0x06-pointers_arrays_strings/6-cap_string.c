@@ -9,6 +9,11 @@ int isLower(char c)
 {
 return (c >= 97 && c <= 122);
 }
+/**
+ * isDelimiter - determine if ascii a delimiter
+ * @c:char
+ * Return: 1 if true, 0 if false
+*/
 int isDelimiter(char c)
 {
 int i;
@@ -19,6 +24,11 @@ if (c == delimiter[i])
 return (1);
 return (0);
 }
+/**
+ * cap_string -  capitalizes all words of a string.
+ * @s: string
+ * Return: string with cap words
+*/
 char *cap_string(char *s)
 {
 int check = 1;

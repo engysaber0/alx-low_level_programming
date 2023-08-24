@@ -4,11 +4,12 @@
  * print_buffer - prints a buffer.
  * @size: size
  * @b: buffer
- * Return :Nothing
+ * Return :Void
 */
 void print_buffer(char *b, int size)
 {
 int i, j, o;
+
 o = 0;
 
 if (size <= 0)

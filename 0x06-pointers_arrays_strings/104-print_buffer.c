@@ -23,7 +23,7 @@ printf("%08x: ", n);
 for (i = 0; i < 10; i++)
 {
 if (i < j)
-printf("%2x", *(b + n + i));
+printf("%02x", *(b + n + i));
 else
 printf(" ");
 if (i % 2)
@@ -42,6 +42,6 @@ c = '.';
 printf("%c", c);
 }
 printf("\n");
-n = n + 10;
+n += 10;
 }
 }

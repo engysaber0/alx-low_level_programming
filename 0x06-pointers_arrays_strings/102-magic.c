@@ -5,7 +5,8 @@
 */
 int main(void)
 {
-int n, *p;
+int n;
+int *p;
 int a[5];
 
 a[2] = 1024;

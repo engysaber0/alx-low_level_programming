@@ -7,7 +7,7 @@
 */
 void print_buffer(char *b, int size)
 {
-int i, j, b;
+int i, j, n;
 n = 0;
 
 if (size <= 0)

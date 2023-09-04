@@ -30,44 +30,38 @@ return (w);
 */
 char **strtow(char *str)
 {
-int i, j, k, l, n = 0, wc = 0;
-char **w;
+int i, k = 0, l = 0, w, c = 0, s, e;
+char **m, *t;
 
-if (str == NULL || *str == '\0')
+while (*(str + l))
+l++;
+w = wrdcnt(str);
+if (w == 0)
 return (NULL);
-n = wrdcnt(str);
-if (n == 1)
+m = (char **) malloc(sizeof(char *) * (w + 1));
+if (m == NULL)
 return (NULL);
-w = (char **)malloc(n *sizeof(char *));
-if (w == NULL)
-return (NULL);
-w[n - 1] = NULL;
-i = 0;
-while (str[i])
+for (i = 0; i <= l; i++)
 {
-if (str[i] != ' ' && (i == 0 || str[i - 1] == ' '))
+if (str[i] == ' ' || str[i] == '\0')
 {
-for (j = 1; str[i + j] != ' ' && str[i + j]; j++)
-;
-j++;
-w[wc] = (char *)malloc(j *sizeof(char));
-j--;
-if (w[wc] == NULL)
+if (c)
 {
-for (k = 0; k < wc; k++)
-free(w[k]);
-free(w[n - 1]);
-free(w);
+e = i;
+t = (char *) malloc(sizeof(char) * (c + 1));
+if (t == NULL)
 return (NULL);
+while (s < e)
+*t++ = str[s++];
+*t = '\0';
+m[k] = t - c;
+k++;
+c = 0;
 }
-for (l = 0; l < j; l++)
-w[wc][l] = str[i + 1];
-w[wc][l] = '\0';
-wc++;
-i += j;
 }
-else
-i++;
+else if (c++ == 0)
+s = i;
 }
-return (w);
+m[k] = NULL;
+return (m);
 }

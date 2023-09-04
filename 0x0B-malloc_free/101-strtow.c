@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "main.h"
 /**
  * wrdcnt - counts num of words

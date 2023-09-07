@@ -2,7 +2,7 @@
 #include "main.h"
 /**
  * *malloc_checked - allocates memory using malloc
- * @b: int
+ * @b: num of bytes
  * Return: pointer to array or NULL
 */
 void *malloc_checked(unsigned int b)

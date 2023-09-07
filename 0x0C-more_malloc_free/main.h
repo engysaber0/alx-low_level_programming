@@ -2,8 +2,12 @@
 #define MAIN_H
 #include <stdlib.h>
 #include <stdio.h>
+#include <limits.h>
 int _putchar(char c);
 void _puts(char *str);
+void errors(void);
+int _strlen(char *s);
+int is_digit(char *s);
 int _atoi(const char *s);
 void print_int(unsigned long int n);
 void *malloc_checked(unsigned int b);

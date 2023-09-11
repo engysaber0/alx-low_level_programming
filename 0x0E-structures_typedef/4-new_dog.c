@@ -7,11 +7,11 @@
 */
 int _strlen(const char *str)
 {
-int l = 0;
+int length = 0;
 
 while (*str++)
-l++;
-return (l);
+length++;
+return (length);
 }
 /**
  * _strcopy - a funcction to return @dest
@@ -33,23 +33,27 @@ return (dest);
  * @name: name
  * @age: age
  * @owner: owner
- * Return: struct pointer dog
+ * Return: struct pointer dog or NULL
 */
 dog_t *new_dog(char *name, float age, char *owner)
 {
 dog_t *dog;
 
 if (!name || age < 0 || !owner)
-	return (NULL);
+return (NULL);
 dog = (dog_t *) malloc(sizeof(dog_t));
-
 if (dog == NULL)
 return (NULL);
-
 dog->name = malloc(sizeof(char) * (_strlen(name) + 1));
-
 if ((*dog).name == NULL)
 {
+free(dog);
+return (NULL);
+}
+dog->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
+if ((*dog).owner == NULL)
+{
+free(dog->name);
 free(dog);
 return (NULL);
 }

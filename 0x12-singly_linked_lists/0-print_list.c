@@ -10,8 +10,8 @@ int counter;
 
 if (s == NULL)
 return (0);
-for (counter = 0; *s; counter++)
-*s++;
+for (counter = 0; *s++; counter++)
+;
 return (counter);
 }
 

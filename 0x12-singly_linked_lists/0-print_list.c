@@ -10,8 +10,8 @@ int counter;
 
 if (s == NULL)
 return (0);
-for (counter = 0; *s++; counter++)
-;
+while (*s++)
+counter++;
 return (counter);
 }
 
@@ -26,10 +26,7 @@ size_t counter;
 
 for (counter = 0; h; counter++)
 {
-if (h->str == NULL)
-printf("[0] (nil)\n");
-else
-printf("[%d] %s\n", h->len, h->str);
+printf("[%d] %s\n", _strlen(h->str), h->str ? h->str : "(nil)");
 h = h->next;
 }
 return (counter);

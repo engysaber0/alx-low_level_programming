@@ -10,5 +10,5 @@ size_t length;
 
 for (length = 0; h; length++)
 h = h->next;
-return (i);
+return (length);
 }

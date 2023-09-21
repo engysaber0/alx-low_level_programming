@@ -8,7 +8,7 @@ int _strlen(char *s)
 {
 int counter;
 
-if (s == NULL)
+if (!s)
 return (0);
 while (*s++)
 counter++;
@@ -22,12 +22,13 @@ return (counter);
 */
 size_t print_list(const list_t *h)
 {
-size_t counter;
+size_t counter = 0;
 
-for (counter = 0; h; counter++)
+while (h)
 {
 printf("[%d] %s\n", _strlen(h->str), h->str ? h->str : "(nil)");
 h = h->next;
+counter++;
 }
 return (counter);
 }

@@ -28,3 +28,4 @@ if (!isPrinted)
 /* Print '0' if nothing has been printed*/
 _putchar('0');
 }
+}

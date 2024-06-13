@@ -1,20 +1,39 @@
 #!/usr/bin/python3
-""" Island Perimeter """
+"""
+This is module '5-island_perimeter'
+
+This module contains one function: island_perimeter
+"""
 
 
 def island_perimeter(grid):
-    """ Island Perimeter """
-    peri = 0
-    gl = []
-    for i in range(len(grid)):
-        for j in range(len(grid[i])):
-            gl.append(grid[i][j])
-    for i in range(len(gl)):
-        if i < len(gl) - 1 and i > 0:
-            if gl[i] == 0 and gl[i + 1] == 1 or gl[i] == 0 and gl[i - 1] == 1:
-                peri += 1
-    if peri % 2 == 0:
-        peri *= 2
-    else:
-        peri = (peri * 2) - 1
-    return peri
+    """
+    an instance to find per of island
+    :param grid: grid to look inside
+    :return: perimeter of the island
+    """
+    d = 0
+    perimeter = 0
+    height = len(grid)
+    length = len(grid[0])
+    for i in grid:
+        c = 0
+        for j in i:
+            if j == 1:
+                surr = 4
+                if c != (length - 1):
+                    if grid[d][c + 1] == 1:
+                        surr -= 1
+                if c != 0:
+                    if grid[d][c - 1] == 1:
+                        surr -= 1
+                if d != (height - 1):
+                    if grid[d + 1][c] == 1:
+                        surr -= 1
+                if d != 0:
+                    if grid[d - 1][c] == 1:
+                        surr -= 1
+                perimeter += surr
+            c += 1
+        d += 1
+    return (perimeter)
